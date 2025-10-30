@@ -3,16 +3,37 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Sale extends Model
 {
-    use HasFactory;
+    public $timestamps = false;
 
-    protected $fillable = ['external_id', 'payload', 'occurred_at'];
-
-    protected $casts = [
-        'payload' => 'array',
-        'occurred_at' => 'datetime',
+    protected $fillable = [
+        'spp',
+        'odid',
+        'brand',
+        'nm_id',
+        'barcode',
+        'for_pay',
+        'sale_id',
+        'subject',
+        'category',
+        'g_number',
+        'income_id',
+        'is_storno',
+        'is_supply',
+        'tech_size',
+        'region_name',
+        'total_price',
+        'country_name',
+        'finished_price',
+        'is_realization',
+        'warehouse_name',
+        'price_with_disc',
+        'discount_percent',
+        'last_change_date',
+        'supplier_article',
+        'oblast_okrug_name',
+        'promo_code_discount',
     ];
 }

@@ -6,18 +6,27 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    public function up()
+    public function up(): void
     {
         Schema::create('incomes', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('external_id')->nullable()->index();
-            $table->json('payload')->nullable();
-            $table->timestamp('occurred_at')->nullable();
-            $table->timestamps();
+            $table->date('date')->nullable();
+            $table->string('nm_id')->nullable();
+            $table->string('number')->nullable();
+            $table->string('barcode')->nullable();
+            $table->integer('quantity')->nullable();
+            $table->string('income_id')->nullable();
+            $table->string('tech_size')->nullable();
+            $table->date('date_close')->nullable();
+            $table->decimal('total_price', 12, 2)->nullable();
+            $table->string('warehouse_name')->nullable();
+            $table->date('last_change_date')->nullable();
+            $table->string('supplier_article')->nullable();
+
+            $table->timestamps(false);
         });
     }
 
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('incomes');
     }

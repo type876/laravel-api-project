@@ -3,16 +3,30 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Stock extends Model
 {
-    use HasFactory;
+    public $timestamps = false;
 
-    protected $fillable = ['external_id', 'payload', 'occurred_at'];
-
-    protected $casts = [
-        'payload' => 'array',
-        'occurred_at' => 'datetime',
+    protected $fillable = [
+        'date',
+        'brand',
+        'nm_id',
+        'price',
+        'barcode',
+        'sc_code',
+        'subject',
+        'category',
+        'discount',
+        'quantity',
+        'is_supply',
+        'tech_size',
+        'quantity_full',
+        'is_realization',
+        'warehouse_name',
+        'in_way_to_client',
+        'last_change_date',
+        'supplier_article',
+        'in_way_from_client',
     ];
 }
