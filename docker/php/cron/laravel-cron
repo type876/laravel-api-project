@@ -1,0 +1,1 @@
+0 10,22 * * * cd /var/www && /usr/local/bin/php artisan pull:api-data >> /var/log/laravel-cron.log 2>&1

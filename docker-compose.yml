@@ -13,20 +13,6 @@ services:
     networks:
       - laravel
 
-  web:
-    image: nginx:alpine
-    container_name: laravel-web
-    restart: unless-stopped
-    ports:
-      - "8000:80"
-    volumes:
-      - ./app:/var/www
-      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
-    depends_on:
-      - app
-    networks:
-      - laravel
-
   db:
     image: mysql:8.0
     container_name: laravel-db
@@ -37,7 +23,7 @@ services:
       MYSQL_USER: laravel
       MYSQL_PASSWORD: secret
     ports:
-      - "3307:3306"
+      - "3332:3306"
     volumes:
       - dbdata:/var/lib/mysql
     networks:

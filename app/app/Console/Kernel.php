@@ -14,6 +14,11 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \App\Console\Commands\PullApiData::class,
+        \App\Console\Commands\CreateCompany::class,
+        \App\Console\Commands\CreateAccount::class,
+        \App\Console\Commands\CreateApiService::class,
+        \App\Console\Commands\CreateTokenType::class,
+        \App\Console\Commands\CreateToken::class,
     ];
 
     /**
@@ -21,7 +26,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // Здесь можно планировать команду на cron, если нужно
+
     }
 
     /**

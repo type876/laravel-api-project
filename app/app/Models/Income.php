@@ -7,8 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Income extends Model
 {
     public $timestamps = false;
+    public $incrementing = false;
+    protected $primaryKey = null;
 
     protected $fillable = [
+        'account_id',
         'date',
         'nm_id',
         'number',

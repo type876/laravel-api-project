@@ -7,8 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Stock extends Model
 {
     public $timestamps = false;
+    public $incrementing = false;
+    protected $primaryKey = null;
 
     protected $fillable = [
+        'account_id',
         'date',
         'brand',
         'nm_id',

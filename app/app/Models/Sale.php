@@ -7,8 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Sale extends Model
 {
     public $timestamps = false;
+    public $incrementing = false;
+    protected $primaryKey = null;
 
     protected $fillable = [
+        'account_id',
         'spp',
         'odid',
         'brand',

@@ -7,8 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     public $timestamps = false;
+    public $incrementing = false;
+    protected $primaryKey = null;
 
     protected $fillable = [
+        'account_id',
         'odid',
         'brand',
         'nm_id',
