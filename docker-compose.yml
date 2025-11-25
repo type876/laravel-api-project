@@ -29,15 +29,6 @@ services:
     networks:
       - laravel
 
-  composer:
-    image: composer:latest
-    container_name: composer
-    volumes:
-      - ./app:/app
-    working_dir: /app
-    networks:
-      - laravel
-
 volumes:
   dbdata:
 
